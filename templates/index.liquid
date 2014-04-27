@@ -1,0 +1,97 @@
+{% comment %}
+
+  This is the homepage of your site.
+
+  More info on global variables (available on all templates):
+    - http://docs.shopify.com/themes/liquid-variables/global
+{% endcomment %}
+
+{% assign page = pages.frontpage %}
+
+<div class="cover">
+    <!-- Desktop Slider -->
+    <div class="hide-for-small">
+        <div id="featured">
+          <a href="collections/all" title="Browse our catalog">
+          <img src="{{'featured_image_1.jpg'| asset_url}}" alt="{{ settings.featured_image_1_alt | escape }}" />
+          </a>
+        </div>
+      </div>
+    <!-- End Desktop Slider -->
+</div>
+
+<div class="wrapper">
+  <div class="welcome">
+    <!-- Begin intro -->
+          <h1>{{ pages.frontpage.title }}</h1>
+          <p>{{ pages.frontpage.content }}</p>
+      <!-- End intro -->
+  </div>
+  <hr>
+</div>
+
+
+<div id="featured-products">
+<h2>Browse by Category</h2>
+
+
+<div class="grid-uniform">
+
+  {% comment %}
+    Show three collections, unless it's 'frontpage'.
+
+    Use an index variable in combination to the limit filter
+    to account for the frontpage collection being in top 3 returned.
+
+    Use variable isEmpty to check if no collections will be shown.
+    For empty store demo only.
+  {% endcomment %}
+  {% assign index = 1 %}
+  {% assign isEmpty = true %}
+
+  {% for collection in collections limit:4 %}
+    {% unless index > 4 %}
+
+      {% unless collection.handle == 'frontpage' %}
+        {% assign isEmpty = false %}
+        {% include 'collection-grid-item'%}
+      {% endunless %}
+
+    {% endunless %}
+
+    {% if isEmpty %}
+      <div class="grid-item">
+        <p>You don't have any collections to show here. <a href="/admin/custom_collections">Add some collections</a> to go along with the default Frontpage.</p>
+      </div>
+      <div class="grid-item">
+        <div class="grid-uniform">
+          <div class="grid-item large--one-third medium--one-half text-center">
+            <div class="demo-image">
+              Collection Image
+            </div>
+            <p><a href="/admin/custom_collections">Example Collection Title</a></p>
+          </div>
+          <div class="grid-item large--one-third medium--one-half text-center">
+            <div class="demo-image">
+              Collection Image
+            </div>
+            <p><a href="/admin/custom_collections">Example Collection Title</a></p>
+          </div>
+          <div class="grid-item large--one-third medium--one-half text-center">
+            <div class="demo-image">
+              Collection Image
+            </div>
+            <p><a href="/admin/custom_collections">Example Collection Title</a></p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% comment %}Add 1 to the current index{% endcomment %}
+    {% assign index = index | plus: 1 %}
+  {% endfor %}
+
+</div>
+</div>
+
+</div>

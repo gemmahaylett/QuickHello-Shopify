@@ -1,0 +1,393 @@
+$dark_grey: #666666;
+$blue: #75bcb5;
+$pink: #e5729c;
+$bebas: 'bebas_neueregular';
+$museo: 'museo_sans500';
+
+$fontAwesomePath:   "../font" !default;
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ fonts */
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('./BebasNeue-webfont.eot');
+    src: url('./BebasNeue-webfont.eot?#iefix') format('embedded-opentype');
+    src: url('./BebasNeue-webfont.woff') format('woff');
+    src: url('./BebasNeue-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans500';
+    src: url('./MuseoSans_500-webfont.eot');
+    src: url('./MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype');
+    src: url('./MuseoSans_500-webfont.woff') format('woff');
+    src: url('./MuseoSans_500-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ body */
+
+body{
+ 
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ layouts */
+
+.row{
+  max-width: 50rem;
+}
+
+.wrapper{
+  width: 960px;
+  padding: 0px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ general styles */
+
+h1, h2, h3, h5, h6{
+  color: $dark_grey;
+  font-weight : bold;
+  font-family: $bebas;
+  text-transform : uppercase;
+  text-align: center;
+}
+
+p, h4, label{
+  color: $dark_grey;
+  font-family: $museo;
+  font-size: 14px;
+}
+
+h1{
+  font-size : 50px;
+  margin-bottom: 30px;
+}
+
+h2{
+  font-size : 36px;
+}
+
+a{
+  font-family: $museo;
+  text-decoration: none;
+}
+
+footer{
+  background: $blue;
+  padding: 50px 0;
+  margin-top: 80px;
+
+  p, a, a:hover{
+    color: white;
+    font-size: 14px;
+  }
+}
+
+.btn, .btn:hover{
+  background: $pink;
+  background-color: $pink;
+  font-family: $museo;
+  text-transform: uppercase;
+}
+
+ul{
+  list-style-type: none;
+}
+
+nav{
+  section{
+    padding: 0;
+  }
+}
+
+footer{
+  h4{
+    margin-bottom: 10px;
+  }
+}
+
+input[type="text"]{
+  display: inline-block;
+  font-family: $museo;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ custom classes */
+
+#featured-products h6.panel{
+  border-style: none;
+  border-width: 0px;
+  font-family:  $museo;
+  text-transform : uppercase;
+  font-size : 17px;
+  letter-spacing : 1.27px;
+  color : #FFFFFF;
+  text-align: center;
+  background: $blue;
+  display: block;
+  padding: 20px;
+  margin: 0px;
+}
+
+#featured-products .product-grid-image img{
+  margin-bottom: 0px;
+}
+
+.top-bar{
+  background: $blue;
+}
+
+.full-width{
+  background: $blue;
+}
+
+.logo{
+  img{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+  }
+}
+
+#featured-products, .catalog{
+  h2{
+    margin-top: 15px;
+  }
+}
+
+#featured{
+  img{
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.welcome, .product-listing{
+  padding-top: 50px;
+}
+
+#featured-products{
+  h2{
+    padding-bottom: 30px;
+  }
+}
+
+.product-listing {
+  a{
+    font-family : $museo;
+    font-size : 13px;
+    line-height : 27px;
+    color : #333333;
+    text-transform: none;
+    text-align: left;
+    font-weight: normal;
+    display: inline-block;
+  }
+
+  p{
+
+  }
+
+  span{
+    float: right;
+    font-family : $bebas;
+    display: inline-block;
+  }
+}
+
+.breadcrumb{
+  border-style: none;
+  background-color: transparent;
+  font-size: 1em;
+  font-family : $museo;
+  text-transform: uppercase;
+}
+
+.sort-category{
+  font-size: 12px;
+  font-family: $museo;
+  padding: 0.5625rem 0.875rem 0.5625rem;
+  text-transform: uppercase;
+  line-height: 1.6;
+
+  a{
+    color: $dark_grey;
+  }
+}
+
+footer{
+  
+}
+
+.nav-bar{
+  background-color: $blue;
+  padding: 15px;
+
+  ul{
+    font-family: $museo;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    font-weight: bold;
+  }
+
+  a{
+    color: white;
+  }
+}
+
+.site-nav{
+  a{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  }
+}
+
+.page-header {
+  margin-bottom: 0px;
+  border-bottom: none;
+  h3{
+    font-family: $museo;
+  }
+}
+
+.blog_author{
+  font-family: $museo;
+  font-size: 1em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.page-header time{
+  font-family: $museo;
+}
+
+.product-detail{
+  h2{
+    text-align : left;
+    margin: 0;
+  }
+
+  .page-header{
+    margin-bottom: 0;
+  }
+  input{
+    display: inline-block;
+  }
+  .btn{
+    width: auto;
+    float: right;
+  }
+
+  hr{
+    margin: 20px 0;
+}
+  span{
+    font-family: $museo;
+    color: $dark_grey;
+  }
+}
+
+.cart-row {
+  h2{
+    text-align: left;
+      margin-bottom: 0;
+    a{
+    font-family: $bebas;
+    font-size: 1.5em;
+
+  }
+  } 
+}
+
+footer i{
+  font-size: 20px;
+  margin: 0 15px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ div specific styles */
+
+.top-bar-section ul li > a{
+  font-family: $museo;
+  text-transform : uppercase;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover {
+  background: transparent;
+}
+
+.top-bar-section ul{
+  background: transparent;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Homepage specific styles */
+
+.product-detail{
+  padding-top: 30px;
+}
+
+
+.breadcrumb > * a{
+  color: $dark_grey;
+}
+
+h6.panel{
+  
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Product Detail specific styles */
+
+.product-detail{
+
+  h2{
+    text-align: left;
+  }
+  h3{
+    font-size: 25px;
+    text-align: left;
+  }
+
+  input{
+    width: 10%;
+    height: 44px;
+    margin: 0;
+  }
+
+  button{
+    float: right;
+    margin: 0;
+  }
+
+  p{
+    margin-top: 20px;
+  }
+}
+
+.related-products{
+  h2{
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .product-listing-row{
+    padding-top: 0px;
+  }
+}
+
+#customer-links{
+  a{
+    display: inline;
+    padding: 0 5px;
+  }
+  .or{
+    color: rgb(95, 92, 92);
+    text-transform: uppercase;
+    font-family: $museo;
+    font-size: 12px;
+  }
+}
