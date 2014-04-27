@@ -25,10 +25,9 @@
           Loop through the persistent theme settings and list out each social network link.
         {% endcomment %}
         <ul class="inline-list">
-          {% if settings.twitter_link != blank %}<a href="{{ settings.twitter_link }}" title="{{ shop.name }} on Twitter"><i class="icon-twitter"></i></a>{% endif %}
-          {% if settings.facebook_link != blank %}<a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook"><i class="icon-facebook"></i></a>{% endif %}
-          {% if settings.instagram_link != blank %}<a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram"><i class="icon-instagram"></i></a>{% endif %}
-          {% if settings.pinterest_link != blank %}<a href="{{ settings.pinterest_link }}" title="{{ shop.name }} on Pinterest"><i class="icon-pinterest"></i></a>{% endif %}
+          {% if settings.twitter_link != blank %}<a href="{{ settings.twitter_link }}" title="{{ shop.name }} on Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>{% endif %}
+          {% if settings.facebook_link != blank %}<a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>{% endif %}
+          {% if settings.pinterest_link != blank %}<a href="{{ settings.pinterest_link }}" title="{{ shop.name }} on Pinterest"><i class="fa fa-pinterest-square fa-2x"></i></a>{% endif %}
         </ul>
       </div>
       {% endif %}
@@ -58,8 +57,8 @@
     </ul>
 
     <p class="text-center">
-      <a href="">Timber v1.0</a> by <a href="http://www.shopify.com?ref=Timber">Shopify</a><br>
-      <small>{{ powered_by_link }}</small>
+      <a href="">Quick Hello</a> by <a href="http://www.gemmahaylett.com">Gemma Haylett</a><br>
+      <small>Powered by Shopify</small>
     </p>
 
   </div>
