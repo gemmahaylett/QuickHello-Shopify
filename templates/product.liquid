@@ -198,12 +198,14 @@
 
       {% for collection in product.collections  %}
         {% if collection.title != 'frontpage' and collection.products_count > 1 %}
+        <div class ="related-prod">
           <h2>Related Products</h2>
           <hr>
           {% for product in collection.products limit:3%}
             {% if product.title != currentProduct %}
               {% include 'product-grid-item' %}
             {% endif %}
+          </div>
             {% else %}
 
               <div class="grid-item">

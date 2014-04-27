@@ -46,7 +46,7 @@
   </a>
  
   <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
-   <p>
+   <span>
       {% if sold_out %}
       <strong>Sold Out</strong>
       {% endif %}
@@ -61,6 +61,6 @@
     {% if on_sale %}
       <span><strong>On Sale</strong> from {{ product.compare_at_price | money }}</span>
     {% endif %}
-  </p>
+  </span>
 
 </div>
